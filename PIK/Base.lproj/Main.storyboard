@@ -21,7 +21,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="470"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buninskieLuga" translatesAutoresizingMaskIntoConstraints="NO" id="5vA-Nz-5BH" userLabel="detailLargeImage">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buninskieLuga" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5vA-Nz-5BH" userLabel="detailLargeImage">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="470"/>
                                 </imageView>
                                 <imageView clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wsX-bN-8Bw" userLabel="bottomGradientMask">
@@ -172,7 +172,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="160" height="150"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дворы-парки" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elX-gC-jcc" userLabel="featureNameLabel">
+                                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дворы-парки" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elX-gC-jcc" userLabel="featureNameLabel">
                                                                         <rect key="frame" x="0.0" y="110" width="160" height="40"/>
                                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                                         <nil key="textColor"/>
@@ -265,24 +265,52 @@ Feature Table View Cell</string>
                             </tableViewSection>
                             <tableViewSection headerTitle=" " id="tE6-71-23a">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="272" id="1Dd-wT-as2" userLabel="Map Table View Cell">
-                                        <rect key="frame" x="0.0" y="1078" width="375" height="272"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="160" id="1Dd-wT-as2" userLabel="Map Table View Cell">
+                                        <rect key="frame" x="0.0" y="1078" width="375" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1Dd-wT-as2" id="13x-q3-Kcq">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="271.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="159.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gc9-Wj-MhZ" userLabel="mapView" customClass="GMSMapView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="271.5"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyi-yd-q16" userLabel="buttonForSegue">
+                                                    <rect key="frame" x="10" y="10" width="355" height="139.5"/>
+                                                    <connections>
+                                                        <segue destination="rUa-r3-xNM" kind="show" identifier="showMap" id="qHa-59-hjP"/>
+                                                    </connections>
+                                                </button>
+                                                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gc9-Wj-MhZ" userLabel="mapView" customClass="GMSMapView">
+                                                    <rect key="frame" x="10" y="10" width="355" height="139.5"/>
                                                     <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="gc9-Wj-MhZ" secondAttribute="trailing" id="18g-b2-ChX"/>
-                                                <constraint firstItem="gc9-Wj-MhZ" firstAttribute="top" secondItem="13x-q3-Kcq" secondAttribute="top" id="bas-OF-6bK"/>
-                                                <constraint firstItem="gc9-Wj-MhZ" firstAttribute="leading" secondItem="13x-q3-Kcq" secondAttribute="leading" id="fXA-CB-Pep"/>
-                                                <constraint firstAttribute="bottom" secondItem="gc9-Wj-MhZ" secondAttribute="bottom" id="lrG-6B-4ab"/>
+                                                <constraint firstItem="eyi-yd-q16" firstAttribute="leading" secondItem="13x-q3-Kcq" secondAttribute="leading" constant="10" id="18O-3R-aTb"/>
+                                                <constraint firstAttribute="trailing" secondItem="gc9-Wj-MhZ" secondAttribute="trailing" constant="10" id="18g-b2-ChX"/>
+                                                <constraint firstItem="eyi-yd-q16" firstAttribute="top" secondItem="13x-q3-Kcq" secondAttribute="top" constant="10" id="FAV-DN-51j"/>
+                                                <constraint firstAttribute="trailing" secondItem="eyi-yd-q16" secondAttribute="trailing" constant="10" id="QZM-Ho-jgJ"/>
+                                                <constraint firstItem="gc9-Wj-MhZ" firstAttribute="top" secondItem="13x-q3-Kcq" secondAttribute="top" constant="10" id="bas-OF-6bK"/>
+                                                <constraint firstItem="gc9-Wj-MhZ" firstAttribute="leading" secondItem="13x-q3-Kcq" secondAttribute="leading" constant="10" id="fXA-CB-Pep"/>
+                                                <constraint firstAttribute="bottom" secondItem="eyi-yd-q16" secondAttribute="bottom" constant="10" id="iee-am-a5I"/>
+                                                <constraint firstAttribute="bottom" secondItem="gc9-Wj-MhZ" secondAttribute="bottom" constant="10" id="lrG-6B-4ab"/>
                                             </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle=" " id="Uhp-fE-ViU">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="0.0" id="361-fs-hN0">
+                                        <rect key="frame" x="0.0" y="1266" width="375" height="0.0"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="361-fs-hN0" id="jd8-aC-rWJ">
+                                            <rect key="frame" x="0.0" y="-0.5" width="375" height="0.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -304,7 +332,7 @@ Feature Table View Cell</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IHI-7H-tHS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1182" y="133"/>
+            <point key="canvasLocation" x="1180.4347826086957" y="132.58928571428572"/>
         </scene>
         <!--Feature View Controller-->
         <scene sceneID="hG1-Ne-TqF">
@@ -319,7 +347,37 @@ Feature Table View Cell</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Htx-Wn-rHn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2050.7246376811595" y="151.33928571428569"/>
+            <point key="canvasLocation" x="2007" y="-9"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="IWE-AF-uje">
+            <objects>
+                <viewController id="rUa-r3-xNM" customClass="MapViewController" customModule="PIK" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7hP-bS-ir6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PgF-Jg-4je" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PgF-Jg-4je" firstAttribute="leading" secondItem="Vsv-nN-giR" secondAttribute="leading" id="2DP-k0-w5r"/>
+                            <constraint firstAttribute="bottom" secondItem="PgF-Jg-4je" secondAttribute="bottom" id="Ut6-ZL-Lna"/>
+                            <constraint firstItem="PgF-Jg-4je" firstAttribute="top" secondItem="7hP-bS-ir6" secondAttribute="top" id="XYd-NQ-pzc"/>
+                            <constraint firstItem="Vsv-nN-giR" firstAttribute="trailing" secondItem="PgF-Jg-4je" secondAttribute="trailing" id="xgA-vV-OHr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Vsv-nN-giR"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="PgF-Jg-4je" id="t3l-oo-fWe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Bn-ZS-nkB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2006" y="672"/>
         </scene>
         <!--Filter Table View Controller-->
         <scene sceneID="QMj-sA-FBv">

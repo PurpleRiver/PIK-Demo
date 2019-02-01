@@ -21,6 +21,7 @@
 		49C93C1621FC905800F524CA /* FeaturesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C93C1521FC905800F524CA /* FeaturesCollectionViewCell.swift */; };
 		49D5122A22003939004A640D /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D5122922003939004A640D /* MainTableViewController.swift */; };
 		49D512562203F2CF004A640D /* FeatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D512552203F2CF004A640D /* FeatureViewController.swift */; };
+		49D5125822047AD1004A640D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D5125722047AD1004A640D /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		49C93C1521FC905800F524CA /* FeaturesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesCollectionViewCell.swift; sourceTree = "<group>"; };
 		49D5122922003939004A640D /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		49D512552203F2CF004A640D /* FeatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureViewController.swift; sourceTree = "<group>"; };
+		49D5125722047AD1004A640D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A8C6E58BB5D78F128547B3DC /* Pods-PIK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PIK.release.xcconfig"; path = "Pods/Target Support Files/Pods-PIK/Pods-PIK.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +107,7 @@
 				49150E0221F9AF6F001D7DC6 /* FilterTableViewController.swift */,
 				49C93C1321FC823500F524CA /* DetailTableViewController.swift */,
 				49D512552203F2CF004A640D /* FeatureViewController.swift */,
+				49D5125722047AD1004A640D /* MapViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49D5125822047AD1004A640D /* MapViewController.swift in Sources */,
 				492E14E821F836A200F7C5A6 /* UIView+Extension.swift in Sources */,
 				49150E0321F9AF6F001D7DC6 /* FilterTableViewController.swift in Sources */,
 				492E14D021F8145D00F7C5A6 /* AppDelegate.swift in Sources */,

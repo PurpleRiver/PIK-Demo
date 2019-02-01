@@ -89,6 +89,15 @@ class DetailTableViewController: UITableViewController, UICollectionViewDelegate
         }
     }
     
+    func prepereImage() {
+        let imgUrl = NSURL(string: detailsOfHouse.getImage())
+        
+        if imgUrl != nil {
+            let data = NSData(contentsOf: imgUrl! as URL)
+            detailLargeImage.image = UIImage(data: data! as Data)
+        }
+    }
+    
     // MARK: - Collection view data source
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return features.count
@@ -125,18 +134,8 @@ class DetailTableViewController: UITableViewController, UICollectionViewDelegate
         marker.title = detailsOfHouse.getName()
         marker.snippet = ""
         marker.map = mapView
-        
     }
-    
-    func prepereImage() {
-        let imgUrl = NSURL(string: detailsOfHouse.getImage())
-        
-        if imgUrl != nil {
-            let data = NSData(contentsOf: imgUrl! as URL)
-            detailLargeImage.image = UIImage(data: data! as Data)
-        }
-    }
-    
+
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -146,6 +145,12 @@ class DetailTableViewController: UITableViewController, UICollectionViewDelegate
                 let destinationController = segue.destination as! FeatureViewController
                 destinationController.features = features[indexPaths[0].row]
             }
+        }
+        
+         if segue.identifier == "showMap" {
+            
+            let destinationController = segue.destination as! MapViewController
+            destinationController.products = detailsOfHouse
         }
     }
 }
