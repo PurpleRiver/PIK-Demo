@@ -1,0 +1,6 @@
+framework module Pods_PIK {
+  umbrella header "Pods-PIK-umbrella.h"
+
+  export *
+  module * { export * }
+}

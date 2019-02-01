@@ -1,0 +1,36 @@
+PODS:
+  - Alamofire (4.8.1)
+  - BonMot (5.3)
+  - GoogleMaps (2.5.0):
+    - GoogleMaps/Maps (= 2.5.0)
+  - GoogleMaps/Base (2.5.0)
+  - GoogleMaps/Maps (2.5.0):
+    - GoogleMaps/Base
+  - MARKRangeSlider (1.1.1)
+  - SnapKit (4.0.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - BonMot (~> 5.3)
+  - GoogleMaps
+  - MARKRangeSlider
+  - SnapKit (~> 4.0.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - BonMot
+    - GoogleMaps
+    - MARKRangeSlider
+    - SnapKit
+
+SPEC CHECKSUMS:
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  BonMot: 0104d1b4eda54f4a4b7393d6559539ef25498fbd
+  GoogleMaps: c087b8e5dfe87ca6ebf59adb9b4894a4146bec4f
+  MARKRangeSlider: ef7e1fe84d22996f47fd72dcb8de50b9410aac47
+  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
+
+PODFILE CHECKSUM: fd78045418dbfd93ad9c15a0295658484816c862
+
+COCOAPODS: 1.5.3
