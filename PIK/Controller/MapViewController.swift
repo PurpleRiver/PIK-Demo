@@ -5,13 +5,10 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
 
     @IBOutlet fileprivate weak var mapView: GMSMapView!
     var products: Product = Product()
-    let iconImage = UIImageView()
+    
     // MARK: - View Controller Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        iconImage.image = UIImage(named: "pikIcon")
-        iconImage.layer.cornerRadius = 25
-        iconImage.layer.masksToBounds = true
         
         setCameraPosition()
         mapView.delegate = self
@@ -24,7 +21,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     }
     
     // MARK: - Custom style for ViewController
-    func customNavigationContoller() {
+    private func customNavigationContoller() {
         
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
@@ -34,27 +31,23 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     }
     
     // MARK: - MapView
-    func setCameraPosition() {
+    private func setCameraPosition() {
         
         let camera = GMSCameraPosition.camera(withLatitude: products.getLatitude(), longitude: products.getLongitude(), zoom: 16.0)
+        
         mapView.camera = camera
         showMarker(position: camera.target)
     }
     
-    func showMarker(position: CLLocationCoordinate2D) {
+    private func showMarker(position: CLLocationCoordinate2D) {
         
         let marker = GMSMarker()
         marker.appearAnimation = .pop
         marker.position = position
-//        marker.title = products.getName()
-        
-        marker.icon = iconImage.image
-//        marker.snippet = ""
+        marker.icon = UIImage(named: "pikIcon")
         marker.map = mapView
-        
     }
   
-    
     func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
         
         let customInfoWindow = Bundle.main.loadNibNamed("CustomInfoWindow", owner: self, options: nil)!.first as! CustomInfoWindow
@@ -67,7 +60,6 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
             let data = NSData(contentsOf: imgUrl! as URL)
             customInfoWindow.thumbImage.image = UIImage(data: data! as Data)
         }
-  //      customInfoWindow.thumbImage.image = UIImage(named: products.getImage())
         
         return customInfoWindow
     }

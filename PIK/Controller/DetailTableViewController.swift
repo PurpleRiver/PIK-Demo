@@ -11,8 +11,12 @@ class DetailTableViewController: UITableViewController, UICollectionViewDelegate
             detailNameTextLabel.text = detailsOfHouse.getName()
         }
     }
-    
-    @IBOutlet weak var bottomGradientMask: UIImageView!
+    @IBOutlet weak var bottomGradientMask: UIImageView! {
+        didSet {
+            bottomGradientMask.setGradientBackground(colorOne: UIColor.clear, colorTwo: UIColor.black)
+            bottomGradientMask.alpha = 1
+        }
+    }
     @IBOutlet weak var detailCollectionView: UICollectionView!
     
     @IBOutlet fileprivate weak var mapView: GMSMapView!
@@ -23,11 +27,11 @@ class DetailTableViewController: UITableViewController, UICollectionViewDelegate
     // MARK: - View Controller Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         fetchData()
         navigationItem.title = detailsOfHouse.getName()
         
         prepereImage()
-        setGradient()
         setCameraPosition()
     }
     
@@ -38,7 +42,7 @@ class DetailTableViewController: UITableViewController, UICollectionViewDelegate
     }
     
     // MARK: - Custom style for ViewController
-    func customNavigationContoller() {
+    private func customNavigationContoller() {
         
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
@@ -51,20 +55,11 @@ class DetailTableViewController: UITableViewController, UICollectionViewDelegate
         return .lightContent
     }
     
-    func setGradient() {
-        
-        bottomGradientMask.setGradientBackground(colorOne: UIColor.clear, colorTwo: UIColor.black)
-        bottomGradientMask.alpha = 1
-    }
-    
     // MARK: - Fetching data for collection view.
-    
-    func fetchData() {
+    private func fetchData() {
         Alamofire.request("https://my-json-server.typicode.com/PurpleRiver/fakeJsonServer/features").responseJSON { response in
             switch response.result {
             case .success:
-                guard let string = String(data: response.data!, encoding: .utf8) else { return }
-                print(string)
                 
                 guard let arrayOfFeatures = response.result.value as? [[String:AnyObject]]
                     else {
@@ -89,7 +84,7 @@ class DetailTableViewController: UITableViewController, UICollectionViewDelegate
         }
     }
     
-    func prepereImage() {
+    private func prepereImage() {
         let imgUrl = NSURL(string: detailsOfHouse.getImage())
         
         if imgUrl != nil {
@@ -119,20 +114,18 @@ class DetailTableViewController: UITableViewController, UICollectionViewDelegate
     }
     
     // MARK: - MapView
-    func setCameraPosition() {
+    private func setCameraPosition() {
         
-        let camera = GMSCameraPosition.camera(withLatitude: detailsOfHouse.getLatitude(), longitude: detailsOfHouse.getLongitude(), zoom: 16.0)
+        let camera = GMSCameraPosition.camera(withLatitude: detailsOfHouse.getLatitude(), longitude: detailsOfHouse.getLongitude(), zoom: 14.0)
         mapView.camera = camera
         showMarker(position: camera.target)
     }
     
-    func showMarker(position: CLLocationCoordinate2D) {
+    private func showMarker(position: CLLocationCoordinate2D) {
         
         let marker = GMSMarker()
         marker.appearAnimation = .pop
         marker.position = position
-        marker.title = detailsOfHouse.getName()
-        marker.snippet = ""
         marker.map = mapView
     }
 

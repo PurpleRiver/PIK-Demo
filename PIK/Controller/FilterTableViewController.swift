@@ -40,7 +40,7 @@ class FilterTableViewController: UITableViewController, UIPickerViewDelegate, UI
     
     // MARK: - Implementation of Range Slider
     
-    func setupSlider() {
+    private func setupSlider() {
         rangeSlider = MARKRangeSlider.init(frame: CGRect.zero)
         rangeSlider.addTarget(self, action: #selector(rangeSliderValueDidChange), for: UIControl.Event.valueChanged)
         
@@ -55,7 +55,7 @@ class FilterTableViewController: UITableViewController, UIPickerViewDelegate, UI
     }
     
     @objc func rangeSliderValueDidChange(slider: MARKRangeSlider) {
-//      print((NSString(format:"%.1f", slider.leftValue)), (NSString(format:"%.1f",     slider.rightValue)))
+
         minimumValueLabel.text = ("От " + (NSString(format:"%.1f", slider.leftValue) as String) + " млн ₽")
         maximumValueLabel.text = ("До " + (NSString(format:"%.1f", slider.rightValue) as String) + " млн ₽")
     }
@@ -67,22 +67,16 @@ class FilterTableViewController: UITableViewController, UIPickerViewDelegate, UI
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         
-        if pickerView.tag == 1 {
-            return cityNames.count
-            
-        }else{
-            return differentPeriods.count
-        }
+        let numbersOfComponets = pickerView.tag == 1 ? cityNames.count : differentPeriods.count
+        
+        return numbersOfComponets
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
-        if pickerView.tag == 1 {
-            return cityNames[row]
-            
-        }else{
-            return differentPeriods[row]
-        }
+        let titlesForRow = pickerView.tag == 1 ? cityNames[row] : differentPeriods[row]
+       
+        return titlesForRow
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
@@ -94,6 +88,5 @@ class FilterTableViewController: UITableViewController, UIPickerViewDelegate, UI
             choosePeriodLabel.text = differentPeriods[row]
         }
     }
-    
     // MARK: - TO DO Filter and animate results
 }

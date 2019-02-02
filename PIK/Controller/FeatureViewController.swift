@@ -34,7 +34,7 @@ class FeatureViewController: UIViewController {
     }
     
     // MARK: - Custom style for ViewController
-    func customNavigationContoller() {
+    private func customNavigationContoller() {
         
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
@@ -47,7 +47,7 @@ class FeatureViewController: UIViewController {
         return .lightContent
     }
     
-    func showImage() {
+    private func showImage() {
         let imgUrl = NSURL(string: features.getImage())
         
         if imgUrl != nil {
@@ -72,7 +72,7 @@ class FeatureViewController: UIViewController {
         }
     }
     
-    func showBadgeLabel() {
+    private func showBadgeLabel() {
         
         imageView.addSubview(badgeLabel)
         
@@ -89,7 +89,7 @@ class FeatureViewController: UIViewController {
         }
     }
     
-    func showText() {
+    private func showText() {
         
         scrollView.snp.makeConstraints { make in
             make.edges.equalTo(view)

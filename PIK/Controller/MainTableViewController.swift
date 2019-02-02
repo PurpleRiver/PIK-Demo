@@ -4,8 +4,18 @@ import Alamofire
 
 class MainTableViewController: UITableViewController, UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate, UISearchResultsUpdating {
     
-    @IBOutlet weak var topGradientMask: UIImageView!
-    @IBOutlet weak var bottomGradientMask: UIImageView!
+    @IBOutlet weak var topGradientMask: UIImageView! {
+        didSet {
+            topGradientMask.setGradientBackground(colorOne: UIColor.black, colorTwo: UIColor.clear)
+            topGradientMask.alpha = 0.5
+        }
+    }
+    @IBOutlet weak var bottomGradientMask: UIImageView! {
+        didSet {
+            bottomGradientMask.setGradientBackground(colorOne: UIColor.clear, colorTwo: UIColor.black)
+            bottomGradientMask.alpha = 1
+        }
+    }
     
     @IBOutlet weak var headerImageView: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -22,42 +32,13 @@ class MainTableViewController: UITableViewController, UICollectionViewDataSource
         }
     }
     
-    var searchController: UISearchController!
+    private var searchController: UISearchController!
     var searchResults: [Product] = []
     
     fileprivate var products = [Product]()
     
-    // Functionality for call button
     @IBAction func callButtonIsPressed(_ sender: UIButton) {
-        
-        let callOptionsMenu = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        
-        let callToOffice = UIAlertAction(title: "Позвонить в ПИК", style: .default) { (action:UIAlertAction!) -> Void in
-            
-            let alertMessage = UIAlertController(title: "+7(495)116-77-52", message: nil, preferredStyle: .alert)
-            
-            alertMessage.addAction(UIAlertAction(title: "Отмена", style: .cancel, handler: nil))
-            alertMessage.addAction(UIAlertAction(title: "Позвонить", style: .default, handler: nil))
-            
-            self.present(alertMessage, animated: true)
-        }
-        
-        let orderCallback = UIAlertAction(title: "Заказать обратный звонок", style: .default) { (action:UIAlertAction!) -> Void in
-            
-            let alertMessage = UIAlertController(title: "Service Unavailable", message: "Sorry, the call feature is not available yet. Pealse retry later.", preferredStyle: .alert)
-            
-            alertMessage.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            
-            self.present(alertMessage, animated: true)
-        }
-        
-        let cancelAction = UIAlertAction(title: "Отмена", style: .cancel, handler: nil)
-        
-        callOptionsMenu.addAction(callToOffice)
-        callOptionsMenu.addAction(orderCallback)
-        callOptionsMenu.addAction(cancelAction)
-        
-        present(callOptionsMenu, animated: true)
+        callInFeature()
     }
     
     // MARK: - View Controller Lifecycle
@@ -65,14 +46,12 @@ class MainTableViewController: UITableViewController, UICollectionViewDataSource
         super.viewDidLoad()
         
         configureSearchController()
-        setGradient()
         fetchData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        // Hide the Navigation Bar
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
@@ -84,32 +63,19 @@ class MainTableViewController: UITableViewController, UICollectionViewDataSource
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
-    // MARK: - Some custom style for ViewController
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     
-    func setGradient() {
-        
-        topGradientMask.setGradientBackground(colorOne: UIColor.black, colorTwo: UIColor.clear)
-        topGradientMask.alpha = 0.5
-        
-        bottomGradientMask.setGradientBackground(colorOne: UIColor.clear, colorTwo: UIColor.black)
-        bottomGradientMask.alpha = 1
-    }
-    
     // MARK: - Implementing searchBar
-    
-    func configureSearchController() {
+    private func configureSearchController() {
         searchController = UISearchController(searchResultsController: nil)
         
         searchController.searchResultsUpdater = self
-//        searchController.dimsBackgroundDuringPresentation = false
-        
         searchController.searchBar.delegate = self
     }
     
-    func filterContext(for searchText: String) {
+    private func filterContext(for searchText: String) {
         
         searchResults = products.filter({(product) -> Bool in
             print(product)
@@ -127,7 +93,7 @@ class MainTableViewController: UITableViewController, UICollectionViewDataSource
     
     // MARK: - Fetching data for collection view.
     
-    func fetchData() {
+   private func fetchData() {
         Alamofire.request("https://my-json-server.typicode.com/PurpleRiver/fakeJsonServer/products").responseJSON { response in
             switch response.result {
             case .success:
@@ -186,6 +152,39 @@ class MainTableViewController: UITableViewController, UICollectionViewDataSource
         return cell
     }
     
+     // Functionality for call button
+    func callInFeature() {
+        
+        let callOptionsMenu = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let callToOffice = UIAlertAction(title: "Позвонить в ПИК", style: .default) { (action:UIAlertAction!) -> Void in
+            
+            let alertMessage = UIAlertController(title: "+7(495)116-77-52", message: nil, preferredStyle: .alert)
+            
+            alertMessage.addAction(UIAlertAction(title: "Отмена", style: .cancel, handler: nil))
+            alertMessage.addAction(UIAlertAction(title: "Позвонить", style: .default, handler: nil))
+            
+            self.present(alertMessage, animated: true)
+        }
+        
+        let orderCallback = UIAlertAction(title: "Заказать обратный звонок", style: .default) { (action:UIAlertAction!) -> Void in
+            
+            let alertMessage = UIAlertController(title: "Service Unavailable", message: "Sorry, the call feature is not available yet. Pealse retry later.", preferredStyle: .alert)
+            
+            alertMessage.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            
+            self.present(alertMessage, animated: true)
+        }
+        
+        let cancelAction = UIAlertAction(title: "Отмена", style: .cancel, handler: nil)
+        
+        callOptionsMenu.addAction(callToOffice)
+        callOptionsMenu.addAction(orderCallback)
+        callOptionsMenu.addAction(cancelAction)
+        
+        present(callOptionsMenu, animated: true)
+    }
+    
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -193,6 +192,7 @@ class MainTableViewController: UITableViewController, UICollectionViewDataSource
             if segue.destination is FilterTableViewController {
             }
         }
+        
         if segue.identifier == "detailViewController" {
             
             if let indexPaths = collectionView.indexPathsForSelectedItems {
