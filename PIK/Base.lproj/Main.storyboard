@@ -17,22 +17,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" id="rsg-MF-KVz">
+                        <view key="tableHeaderView" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" id="rsg-MF-KVz">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="470"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buninskieLuga" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5vA-Nz-5BH" userLabel="detailLargeImage">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="470"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="1074"/>
                                 </imageView>
                                 <imageView clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wsX-bN-8Bw" userLabel="bottomGradientMask">
-                                    <rect key="frame" x="0.0" y="320" width="450" height="150"/>
+                                    <rect key="frame" x="0.0" y="924" width="450" height="150"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="150" id="OzS-kc-WXc"/>
                                     </constraints>
                                     <viewLayoutGuide key="safeArea" id="wgV-Jc-Vdp"/>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Бунинские луга.     Двор-парк" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XN7-zx-byd" userLabel="detailNameTextLabel">
-                                    <rect key="frame" x="30" y="379" width="238" height="71"/>
+                                    <rect key="frame" x="30" y="983" width="238" height="71"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="30"/>
                                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>

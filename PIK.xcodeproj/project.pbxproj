@@ -17,6 +17,8 @@
 		492E14E821F836A200F7C5A6 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492E14E721F836A200F7C5A6 /* UIView+Extension.swift */; };
 		492E150821F8933D00F7C5A6 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492E150721F8933D00F7C5A6 /* ProductCollectionViewCell.swift */; };
 		49A2FF7F21FDB7EE00E104CF /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A2FF7E21FDB7EE00E104CF /* Feature.swift */; };
+		49A73E1E2205518500201F21 /* CustomInfoWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49A73E1D2205518500201F21 /* CustomInfoWindow.xib */; };
+		49A73E202205539400201F21 /* CustomInfoWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A73E1F2205539400201F21 /* CustomInfoWindow.swift */; };
 		49C93C1421FC823500F524CA /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C93C1321FC823500F524CA /* DetailTableViewController.swift */; };
 		49C93C1621FC905800F524CA /* FeaturesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C93C1521FC905800F524CA /* FeaturesCollectionViewCell.swift */; };
 		49D5122A22003939004A640D /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D5122922003939004A640D /* MainTableViewController.swift */; };
@@ -38,6 +40,8 @@
 		492E14E721F836A200F7C5A6 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		492E150721F8933D00F7C5A6 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		49A2FF7E21FDB7EE00E104CF /* Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
+		49A73E1D2205518500201F21 /* CustomInfoWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomInfoWindow.xib; sourceTree = "<group>"; };
+		49A73E1F2205539400201F21 /* CustomInfoWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInfoWindow.swift; sourceTree = "<group>"; };
 		49C93C1321FC823500F524CA /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 		49C93C1521FC905800F524CA /* FeaturesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesCollectionViewCell.swift; sourceTree = "<group>"; };
 		49D5122922003939004A640D /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +89,7 @@
 				492E14D321F8145D00F7C5A6 /* Main.storyboard */,
 				492E14E121F8149500F7C5A6 /* Supporting Files */,
 				492E14DB21F8145E00F7C5A6 /* Info.plist */,
+				49A73E1D2205518500201F21 /* CustomInfoWindow.xib */,
 			);
 			path = PIK;
 			sourceTree = "<group>";
@@ -126,6 +131,7 @@
 			children = (
 				492E150721F8933D00F7C5A6 /* ProductCollectionViewCell.swift */,
 				49C93C1521FC905800F524CA /* FeaturesCollectionViewCell.swift */,
+				49A73E1F2205539400201F21 /* CustomInfoWindow.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -208,6 +214,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49A73E1E2205518500201F21 /* CustomInfoWindow.xib in Resources */,
 				492E14DA21F8145E00F7C5A6 /* LaunchScreen.storyboard in Resources */,
 				492E14D721F8145E00F7C5A6 /* Assets.xcassets in Resources */,
 				492E14D521F8145D00F7C5A6 /* Main.storyboard in Resources */,
@@ -300,6 +307,7 @@
 				492E14E821F836A200F7C5A6 /* UIView+Extension.swift in Sources */,
 				49150E0321F9AF6F001D7DC6 /* FilterTableViewController.swift in Sources */,
 				492E14D021F8145D00F7C5A6 /* AppDelegate.swift in Sources */,
+				49A73E202205539400201F21 /* CustomInfoWindow.swift in Sources */,
 				49C93C1421FC823500F524CA /* DetailTableViewController.swift in Sources */,
 				49A2FF7F21FDB7EE00E104CF /* Feature.swift in Sources */,
 				49C93C1621FC905800F524CA /* FeaturesCollectionViewCell.swift in Sources */,
