@@ -1,5 +1,13 @@
 PODS:
   - Alamofire (4.8.1)
+  - AppCenter (1.13.0):
+    - AppCenter/Analytics (= 1.13.0)
+    - AppCenter/Crashes (= 1.13.0)
+  - AppCenter/Analytics (1.13.0):
+    - AppCenter/Core
+  - AppCenter/Core (1.13.0)
+  - AppCenter/Crashes (1.13.0):
+    - AppCenter/Core
   - BonMot (5.3)
   - GoogleMaps (2.5.0):
     - GoogleMaps/Maps (= 2.5.0)
@@ -11,6 +19,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - AppCenter
   - BonMot (~> 5.3)
   - GoogleMaps
   - MARKRangeSlider
@@ -19,6 +28,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - AppCenter
     - BonMot
     - GoogleMaps
     - MARKRangeSlider
@@ -26,11 +36,12 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  AppCenter: a70408f15de23f925001bfc7b7473094a009a4eb
   BonMot: 0104d1b4eda54f4a4b7393d6559539ef25498fbd
   GoogleMaps: c087b8e5dfe87ca6ebf59adb9b4894a4146bec4f
   MARKRangeSlider: ef7e1fe84d22996f47fd72dcb8de50b9410aac47
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
 
-PODFILE CHECKSUM: fd78045418dbfd93ad9c15a0295658484816c862
+PODFILE CHECKSUM: 1b5586959a7fcd5ecd58742ee83d8889252e7394
 
 COCOAPODS: 1.5.3

@@ -300,6 +300,7 @@ Feature Table View Cell</string>
                                                 <constraint firstAttribute="bottom" secondItem="gc9-Wj-MhZ" secondAttribute="bottom" constant="10" id="lrG-6B-4ab"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="0.60827803938356162" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>

@@ -1,5 +1,8 @@
 import UIKit
 import GoogleMaps
+import AppCenter
+import AppCenterAnalytics
+import AppCenterCrashes
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -7,6 +10,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        // SDK for HockeyApp
+        MSAppCenter.start("491fee94-c6b7-45e9-a56d-5b87c04e2724", withServices:[ MSAnalytics.self, MSCrashes.self ])
         
         // API Key for Google maps
         GMSServices.provideAPIKey("AIzaSyBP_V40_4l1lHyVVrjhlLSeobqFFGglcwc")
