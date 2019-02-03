@@ -5,7 +5,16 @@ import Alamofire
 
 class DetailTableViewController: UITableViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    @IBOutlet weak var detailLargeImage: UIImageView!
+    @IBOutlet weak var detailLargeImage: UIImageView! {
+        didSet {
+            let imgUrl = NSURL(string: detailsOfHouse.getImage())
+            
+            if imgUrl != nil {
+                let data = NSData(contentsOf: imgUrl! as URL)
+                detailLargeImage.image = UIImage(data: data! as Data)
+            }
+        }
+    }
     @IBOutlet weak var detailNameTextLabel: UILabel! {
         didSet {
             detailNameTextLabel.text = detailsOfHouse.getName()
@@ -29,9 +38,7 @@ class DetailTableViewController: UITableViewController, UICollectionViewDelegate
         super.viewDidLoad()
         
         fetchData()
-        navigationItem.title = detailsOfHouse.getName()
         
-        prepereImage()
         setCameraPosition()
     }
     
@@ -84,20 +91,11 @@ class DetailTableViewController: UITableViewController, UICollectionViewDelegate
         }
     }
     
-    private func prepereImage() {
-        let imgUrl = NSURL(string: detailsOfHouse.getImage())
-        
-        if imgUrl != nil {
-            let data = NSData(contentsOf: imgUrl! as URL)
-            detailLargeImage.image = UIImage(data: data! as Data)
-        }
-    }
-    
     // MARK: - Collection view data source
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return features.count
     }
-  
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "featureCell", for: indexPath) as! FeaturesCollectionViewCell
@@ -128,7 +126,7 @@ class DetailTableViewController: UITableViewController, UICollectionViewDelegate
         marker.position = position
         marker.map = mapView
     }
-
+    
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -140,7 +138,7 @@ class DetailTableViewController: UITableViewController, UICollectionViewDelegate
             }
         }
         
-         if segue.identifier == "showMap" {
+        if segue.identifier == "showMap" {
             
             let destinationController = segue.destination as! MapViewController
             destinationController.products = detailsOfHouse

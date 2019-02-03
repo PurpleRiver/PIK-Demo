@@ -12,7 +12,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         // SDK for HockeyApp
-        MSAppCenter.start("491fee94-c6b7-45e9-a56d-5b87c04e2724", withServices:[ MSAnalytics.self, MSCrashes.self ])
+//        MSAppCenter.start("", withServices:[ MSAnalytics.self, MSCrashes.self ])
         
         // API Key for Google maps
         GMSServices.provideAPIKey("AIzaSyBP_V40_4l1lHyVVrjhlLSeobqFFGglcwc")
@@ -44,17 +44,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
-}
-
-extension UIFont {
-    
-    static func appFont(ofSize pointSize: CGFloat) -> UIFont {
-        return UIFont(name: "Helvetica", size: pointSize)!
-    }
-    
-    static func appFontBold(ofSize pointSize: CGFloat) -> UIFont {
-        return UIFont(name: "Helvetica-Bold", size: pointSize)!
     }
 }
 

@@ -28,7 +28,7 @@ class MainTableViewController: UITableViewController, UICollectionViewDataSource
         didSet {
             let textFieldInsideUISearchBar = searchBar.value(forKey: "searchField") as? UITextField
             let placeholderLabel = textFieldInsideUISearchBar?.value(forKey: "placeholderLabel") as? UILabel
-            placeholderLabel?.font = UIFont.appFont(ofSize: 12)
+            placeholderLabel?.font = UIFont.appFont(ofSize: 14)
         }
     }
     
@@ -38,7 +38,7 @@ class MainTableViewController: UITableViewController, UICollectionViewDataSource
     fileprivate var products = [Product]()
     
     @IBAction func callButtonIsPressed(_ sender: UIButton) {
-        callInFeature()
+        phonecallFeature()
     }
     
     // MARK: - View Controller Lifecycle
@@ -78,9 +78,9 @@ class MainTableViewController: UITableViewController, UICollectionViewDataSource
     private func filterContext(for searchText: String) {
         
         searchResults = products.filter({(product) -> Bool in
-            print(product)
+            
             let isMatch = product.getName().range(of: searchText, options: .caseInsensitive) != nil
-            print(isMatch)
+            
             return isMatch
         })
     }
@@ -95,8 +95,10 @@ class MainTableViewController: UITableViewController, UICollectionViewDataSource
     
    private func fetchData() {
         Alamofire.request("https://my-json-server.typicode.com/PurpleRiver/fakeJsonServer/products").responseJSON { response in
+            
             switch response.result {
             case .success:
+
                 guard let string = String(data: response.data!, encoding: .utf8) else { return }
                 print(string)
                 
@@ -153,7 +155,7 @@ class MainTableViewController: UITableViewController, UICollectionViewDataSource
     }
     
      // Functionality for call button
-    func callInFeature() {
+    func phonecallFeature() {
         
         let callOptionsMenu = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         

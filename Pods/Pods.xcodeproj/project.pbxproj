@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -34,6 +34,9 @@
 		397B768025A7D34194089191674808CF /* ConstraintAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593B0C4E29B301A7ED925032CA1024CE /* ConstraintAttributes.swift */; };
 		3B04E101619FFAE275116C14CD971CF8 /* FontInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8D02EBF74CEFF430633CFA3F32EB34 /* FontInspector.swift */; };
 		463CB3774D8C40CEC020D86DE2B5D664 /* EmbeddedTransformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E937E0A0E7780ADF6DA4ADB5CDE909B3 /* EmbeddedTransformation.swift */; };
+		493E06122206F861002629E4 /* rangeSliderTrackRange.png in Resources */ = {isa = PBXBuildFile; fileRef = 493E060F2206F861002629E4 /* rangeSliderTrackRange.png */; };
+		493E06132206F861002629E4 /* rangeSliderTrackRange@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 493E06102206F861002629E4 /* rangeSliderTrackRange@2x.png */; };
+		493E06142206F861002629E4 /* rangeSliderTrackRange@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 493E06112206F861002629E4 /* rangeSliderTrackRange@3x.png */; };
 		4D264689A464634B17B3405754BF55EF /* Composable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625314D52523FF5786A9EACF93B8B343 /* Composable.swift */; };
 		4E1A913EFB404FB11524718FF0298EFE /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0418EE6FFAFBD6F0CEF629289F820CF /* Alamofire.swift */; };
 		4E95C35B91C3E1DDD68B386A2567AA83 /* ConstraintDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810AC0F178287AD9E24B3BCD94DDBC33 /* ConstraintDSL.swift */; };
@@ -73,7 +76,6 @@
 		9BAB9578B181A79F703BB40784ADA2C8 /* ConstraintPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7523BDFAB73D0C5DF975E055EDCFDC4C /* ConstraintPriority.swift */; };
 		9F1835034DC689D402A8F25583EF6A13 /* Tracking+Adaptive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6885AB9085FA9E1B60B10C5DCBAE99AC /* Tracking+Adaptive.swift */; };
 		9FC87C033DA604646C21F0D951B34C71 /* MARKRangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8EBAF59FB67EF244A48CC65CE6D423 /* MARKRangeSlider.m */; };
-		A0DD23A71798A26E7B316737893417C5 /* rangeSliderTrackRange@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D58510EABF6E616D10EA163ECD42905 /* rangeSliderTrackRange@3x.png */; };
 		A43A77BC6A64C020C8251EA30488B04B /* StringStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE9FCBAE5B6DFCBB0369723FAD8875C /* StringStyle.swift */; };
 		A4DBB6724B696ECC25D481F3291F9744 /* ConstraintLayoutGuideDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A7EFF6D9805A69ED32654F621D81BE /* ConstraintLayoutGuideDSL.swift */; };
 		A7B5631983645A07DC794A6F06057590 /* Emphasis.swift in Sources */ = {isa = PBXBuildFile; fileRef = F928B9B8250E64D18319E4C10486F6C9 /* Emphasis.swift */; };
@@ -87,7 +89,6 @@
 		B424F524BBBE34E685129945993809A8 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161D47A5F540F6004B64D9E624FB650C /* Timeline.swift */; };
 		B45FE2CC48BD74B85B92F7B8D3DEB8AE /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA94530275E9864887394924EC524B34 /* ConstraintLayoutSupportDSL.swift */; };
 		B46263953965AF575A08419D00441186 /* Compatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803A871751383BE52C7DC3CFFB4CAC65 /* Compatibility.swift */; };
-		B48DEB6F2092C1EB9FD463CA93D49DF6 /* rangeSliderTrackRange.png in Resources */ = {isa = PBXBuildFile; fileRef = F377AD83CA274CFEB970B0D8E62A5B8F /* rangeSliderTrackRange.png */; };
 		B6A6CA123CCD96CD5FDA746EE7AAAE2B /* AccessibilityHeadingLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F20271783A0DBC6463B5C90B82214A5 /* AccessibilityHeadingLevel.swift */; };
 		B77705737566AE83ED7E448923D7FA60 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E000090FB8ABA0763AB5EA91B5758D4 /* NetworkReachabilityManager.swift */; };
 		BB040198E15CBCA009F3B7C8A70A2611 /* rangeSliderThumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 78A8ED08E0F2D5CB0B541999E6A9BB74 /* rangeSliderThumb.png */; };
@@ -97,7 +98,6 @@
 		C1B10CA5C4F3BFEC2208AE87235C621D /* ConstraintMakerFinalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7566F079C19392C22CE9AAAA8D3B17 /* ConstraintMakerFinalizable.swift */; };
 		C210E7F61032C2F2E51CD7BEF055D153 /* ConstraintPriorityTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832811317D4F82E8234C76077EA7ABBE /* ConstraintPriorityTarget.swift */; };
 		C3F7A48CC99B2E928584202DD7CCF2F0 /* ConstraintLayoutSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0E09F346BB0744B6FCAC645B88C78C /* ConstraintLayoutSupport.swift */; };
-		C77D9BEE5BE9BD02ADBF8F026C09FFD7 /* rangeSliderTrackRange@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A8703A6A1B8D479F0AB83C0D9B7550 /* rangeSliderTrackRange@2x.png */; };
 		C88152508B0894850A02DFF8B78F20C0 /* AdaptableTextContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520B9EBE80BC75CFBEA970F18B738ED9 /* AdaptableTextContainer.swift */; };
 		C88AF1FE394DFF54F3A6C70537F556E3 /* Pods-PIK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE1F21B1D526D48349A6F4FF73A7458 /* Pods-PIK-dummy.m */; };
 		CE7FF722BDADDDBF2679D3E6151E0129 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4BBCB930A61E13FD0481A57303C871 /* Constraint.swift */; };
@@ -187,7 +187,7 @@
 		32A3F484CFD031417D8A80552B8416DA /* ConstraintMaker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMaker.swift; path = Source/ConstraintMaker.swift; sourceTree = "<group>"; };
 		33D537FC7A3F30B897099AC6DBD32113 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
 		34378C5EDCFD423A9C2B79C04458BB9B /* UILayoutSupport+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILayoutSupport+Extensions.swift"; path = "Source/UILayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
-		35DF4081F0A21C07BDBEEA510C209294 /* MARKRangeSlider.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = MARKRangeSlider.bundle; path = "MARKRangeSlider-MARKRangeSlider.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		35DF4081F0A21C07BDBEEA510C209294 /* MARKRangeSlider.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MARKRangeSlider.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A743863F15BE93A765149E1B537DA73 /* BonMot-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BonMot-dummy.m"; sourceTree = "<group>"; };
 		3AEC474E1F95431017141855C8501A33 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
 		3B1EF94FA9C4108EA3BD225C8C04097A /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
@@ -197,6 +197,9 @@
 		437E42A039FFAD047B03748437307C59 /* Pods-PIK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PIK.modulemap"; sourceTree = "<group>"; };
 		46D4C48AD05CA0150F88661F8F108FEA /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		47B8BB61C5AA7C21DCC56C8F9A3A6AA5 /* ConstraintConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConfig.swift; path = Source/ConstraintConfig.swift; sourceTree = "<group>"; };
+		493E060F2206F861002629E4 /* rangeSliderTrackRange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rangeSliderTrackRange.png; path = Resources/rangeSliderTrackRange.png; sourceTree = "<group>"; };
+		493E06102206F861002629E4 /* rangeSliderTrackRange@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rangeSliderTrackRange@2x.png"; path = "Resources/rangeSliderTrackRange@2x.png"; sourceTree = "<group>"; };
+		493E06112206F861002629E4 /* rangeSliderTrackRange@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rangeSliderTrackRange@3x.png"; path = "Resources/rangeSliderTrackRange@3x.png"; sourceTree = "<group>"; };
 		4A4C3362A929A77B7B10DF0C94639F02 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
 		4AE3947B325E697AD1E50D9D75D35829 /* Tracking.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Tracking.swift; path = Sources/Tracking.swift; sourceTree = "<group>"; };
 		4D4BBCB930A61E13FD0481A57303C871 /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Source/Constraint.swift; sourceTree = "<group>"; };
@@ -227,25 +230,24 @@
 		7A5369614CA99F88FCCAD9FA86F3F70B /* ConstraintLayoutGuide+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintLayoutGuide+Extensions.swift"; path = "Source/ConstraintLayoutGuide+Extensions.swift"; sourceTree = "<group>"; };
 		7B7566F079C19392C22CE9AAAA8D3B17 /* ConstraintMakerFinalizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerFinalizable.swift; path = Source/ConstraintMakerFinalizable.swift; sourceTree = "<group>"; };
 		7BE1F21B1D526D48349A6F4FF73A7458 /* Pods-PIK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PIK-dummy.m"; sourceTree = "<group>"; };
-		7CB1CE8318F40221257E590D12117379 /* Pods_PIK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PIK.framework; path = "Pods-PIK.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7EAA9D71736792498C362BDF295E75E7 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CB1CE8318F40221257E590D12117379 /* Pods_PIK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PIK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EAA9D71736792498C362BDF295E75E7 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		803A871751383BE52C7DC3CFFB4CAC65 /* Compatibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Compatibility.swift; path = Sources/Compatibility.swift; sourceTree = "<group>"; };
 		810AC0F178287AD9E24B3BCD94DDBC33 /* ConstraintDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDSL.swift; path = Source/ConstraintDSL.swift; sourceTree = "<group>"; };
 		8297AFEA9DCE8E294EF40ADF94971DC2 /* ConstraintConstantTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConstantTarget.swift; path = Source/ConstraintConstantTarget.swift; sourceTree = "<group>"; };
 		832811317D4F82E8234C76077EA7ABBE /* ConstraintPriorityTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriorityTarget.swift; path = Source/ConstraintPriorityTarget.swift; sourceTree = "<group>"; };
 		84FF884DAD03AD314F6E292F3A7438EC /* Pods-PIK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PIK-umbrella.h"; sourceTree = "<group>"; };
-		864847EA1CA5B7CB5E1870115D0E71F2 /* BonMot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BonMot.framework; path = BonMot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		864847EA1CA5B7CB5E1870115D0E71F2 /* BonMot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BonMot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87B80440E3A832008D5AE839947166BB /* ConstraintMakerExtendable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerExtendable.swift; path = Source/ConstraintMakerExtendable.swift; sourceTree = "<group>"; };
 		89969D273D87CE41A0671ACF007BDF31 /* ConstraintViewDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintViewDSL.swift; path = Source/ConstraintViewDSL.swift; sourceTree = "<group>"; };
 		8A63AD552FA476986671ACDC14C5CBB8 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
 		8AAC67A25217C6AD1CB60250E89EEE87 /* Pods-PIK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PIK.debug.xcconfig"; sourceTree = "<group>"; };
 		8AD10942F68BD17F4D11A84BAD981F91 /* ResourceBundle-MARKRangeSlider-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-MARKRangeSlider-Info.plist"; sourceTree = "<group>"; };
-		8D58510EABF6E616D10EA163ECD42905 /* rangeSliderTrackRange@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "rangeSliderTrackRange@3x.png"; path = "Resources/rangeSliderTrackRange@3x.png"; sourceTree = "<group>"; };
 		8E415EB9817CDAFF83DB19D0160F5683 /* AttributedStringTransformation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AttributedStringTransformation.swift; path = Sources/UIKit/AttributedStringTransformation.swift; sourceTree = "<group>"; };
 		90076D12B0C64178EC6453B4D46F5784 /* rangeSliderThumb@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "rangeSliderThumb@3x.png"; path = "Resources/rangeSliderThumb@3x.png"; sourceTree = "<group>"; };
 		91C979E3064AF4716B159EDD965F322A /* SnapKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-umbrella.h"; sourceTree = "<group>"; };
 		924B55AC2C122468353DF5F00E37340D /* BonMot-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BonMot-prefix.pch"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9769FFA20A4851F1D7AB8E001C6F7D34 /* BonMot-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BonMot-umbrella.h"; sourceTree = "<group>"; };
 		97701CE70E18EDEB4F08E729CDCFE0CB /* SnapKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-prefix.pch"; sourceTree = "<group>"; };
 		9811C462E9C784026851D57249CFA8F2 /* Pods-PIK-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PIK-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -272,7 +274,7 @@
 		C06C96625A06F833B3F4ECBCD10AE243 /* Ligatures.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Ligatures.swift; path = Sources/Ligatures.swift; sourceTree = "<group>"; };
 		C285DE31B21602FFF36472DB3D65A4C6 /* ConstraintLayoutGuide.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuide.swift; path = Source/ConstraintLayoutGuide.swift; sourceTree = "<group>"; };
 		C2ABDF9A815A161F07FEC7BD9362D63E /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
-		C33BDE63E89C11673F313A03D46B8B11 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SnapKit.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C33BDE63E89C11673F313A03D46B8B11 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C364515BFA38DAC6C69650BBB7DB0C5F /* StyleableUIElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StyleableUIElement.swift; path = Sources/UIKit/StyleableUIElement.swift; sourceTree = "<group>"; };
 		C474491F666E0D2C7E1CD8625B9B904D /* Pods-PIK-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PIK-resources.sh"; sourceTree = "<group>"; };
 		C4CC2FB92ECA797572CEACD629053DDE /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
@@ -292,13 +294,11 @@
 		EAAE819F71F7564F3A9521ECDD95AFD3 /* Typealiases.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Typealiases.swift; path = Source/Typealiases.swift; sourceTree = "<group>"; };
 		EDE9FCBAE5B6DFCBB0369723FAD8875C /* StringStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringStyle.swift; path = Sources/StringStyle.swift; sourceTree = "<group>"; };
 		F0418EE6FFAFBD6F0CEF629289F820CF /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
-		F1C0F214F5D853294BC955489C048BA6 /* MARKRangeSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MARKRangeSlider.framework; path = MARKRangeSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1C0F214F5D853294BC955489C048BA6 /* MARKRangeSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MARKRangeSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F27FBD6A38FF771AF232190C190BE65C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F317C2FD37DF3C2E41DC5D5C45366824 /* ConstraintView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintView.swift; path = Source/ConstraintView.swift; sourceTree = "<group>"; };
-		F377AD83CA274CFEB970B0D8E62A5B8F /* rangeSliderTrackRange.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = rangeSliderTrackRange.png; path = Resources/rangeSliderTrackRange.png; sourceTree = "<group>"; };
 		F3FC19480D4962145C8E968FDE363C49 /* LayoutConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraintItem.swift; path = Source/LayoutConstraintItem.swift; sourceTree = "<group>"; };
 		F928B9B8250E64D18319E4C10486F6C9 /* Emphasis.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Emphasis.swift; path = Sources/Emphasis.swift; sourceTree = "<group>"; };
-		F9A8703A6A1B8D479F0AB83C0D9B7550 /* rangeSliderTrackRange@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "rangeSliderTrackRange@2x.png"; path = "Resources/rangeSliderTrackRange@2x.png"; sourceTree = "<group>"; };
 		FA4A2B2BF4ABC75D3790BAD65FA6F1B0 /* Tab.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Tab.swift; path = Sources/Tab.swift; sourceTree = "<group>"; };
 		FB03CE89DCCFD57653D9F936C5BB0690 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB183D887A0F0508511FFD12BBE26B94 /* LayoutConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraint.swift; path = Source/LayoutConstraint.swift; sourceTree = "<group>"; };
@@ -407,7 +407,6 @@
 				0AC5F051241BCDCD432F4219804092FD /* XMLBuilder.swift */,
 				D8B6B3E39735B086F8EB5E826868F8C6 /* Support Files */,
 			);
-			name = BonMot;
 			path = BonMot;
 			sourceTree = "<group>";
 		};
@@ -433,7 +432,6 @@
 				42B525491036879FCB44BC4CDBDA01BA /* Validation.swift */,
 				6D2FDE7F91AAEEBD096A84F1E5E87DB5 /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -444,7 +442,6 @@
 				EAA250C74D31B1D80D66824886BE490F /* Core */,
 				7D7FE55476D8C79CBC1FFF1E005A3C77 /* Crashes */,
 			);
-			name = AppCenter;
 			path = AppCenter;
 			sourceTree = "<group>";
 		};
@@ -585,7 +582,6 @@
 				34378C5EDCFD423A9C2B79C04458BB9B /* UILayoutSupport+Extensions.swift */,
 				686F6104B85E3C6B65F86C5C104901E1 /* Support Files */,
 			);
-			name = SnapKit;
 			path = SnapKit;
 			sourceTree = "<group>";
 		};
@@ -609,7 +605,6 @@
 				93DC5B5703168C7C74EAA80266A5C982 /* Base */,
 				B498B66A3DF4EB444B70E46D654753FE /* Maps */,
 			);
-			name = GoogleMaps;
 			path = GoogleMaps;
 			sourceTree = "<group>";
 		};
@@ -696,7 +691,6 @@
 				E5C3D525FB24BF153E9C858AE6809DAA /* Resources */,
 				F83194888CF580E4FE68E98D92A1A55F /* Support Files */,
 			);
-			name = MARKRangeSlider;
 			path = MARKRangeSlider;
 			sourceTree = "<group>";
 		};
@@ -707,11 +701,11 @@
 				CF45C15CBEBF0159B89B9E6942D02A6C /* rangeSliderThumb@2x.png */,
 				90076D12B0C64178EC6453B4D46F5784 /* rangeSliderThumb@3x.png */,
 				21567C1AB68C9583CEA2A63553F90580 /* rangeSliderTrack.png */,
+				493E060F2206F861002629E4 /* rangeSliderTrackRange.png */,
+				493E06102206F861002629E4 /* rangeSliderTrackRange@2x.png */,
+				493E06112206F861002629E4 /* rangeSliderTrackRange@3x.png */,
 				0A067EE6E36B7758B02BC3D69E819BC1 /* rangeSliderTrack@2x.png */,
 				4E7E00ECA9526AA653A4113F943A0051 /* rangeSliderTrack@3x.png */,
-				F377AD83CA274CFEB970B0D8E62A5B8F /* rangeSliderTrackRange.png */,
-				F9A8703A6A1B8D479F0AB83C0D9B7550 /* rangeSliderTrackRange@2x.png */,
-				8D58510EABF6E616D10EA163ECD42905 /* rangeSliderTrackRange@3x.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -914,6 +908,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
+				TargetAttributes = {
+					01604480EC7DFC6C7ED50186D9606192 = {
+						LastSwiftMigration = 1010;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -981,12 +980,12 @@
 				BB040198E15CBCA009F3B7C8A70A2611 /* rangeSliderThumb.png in Resources */,
 				157864365AE4371BA926B202C883A911 /* rangeSliderThumb@2x.png in Resources */,
 				8DE6275F807A9D42C21FE0BD817F9FEF /* rangeSliderThumb@3x.png in Resources */,
+				493E06132206F861002629E4 /* rangeSliderTrackRange@2x.png in Resources */,
 				EE4F481BE3626F3DF4D287171CCC6038 /* rangeSliderTrack.png in Resources */,
 				CFC6FD180A06454E5062FAD72A583211 /* rangeSliderTrack@2x.png in Resources */,
 				BEF7965BF8E3A61346E4C4D8DBC60843 /* rangeSliderTrack@3x.png in Resources */,
-				B48DEB6F2092C1EB9FD463CA93D49DF6 /* rangeSliderTrackRange.png in Resources */,
-				C77D9BEE5BE9BD02ADBF8F026C09FFD7 /* rangeSliderTrackRange@2x.png in Resources */,
-				A0DD23A71798A26E7B316737893417C5 /* rangeSliderTrackRange@3x.png in Resources */,
+				493E06122206F861002629E4 /* rangeSliderTrackRange.png in Resources */,
+				493E06142206F861002629E4 /* rangeSliderTrackRange@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1194,11 +1193,7 @@
 				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
 				PRODUCT_MODULE_NAME = Alamofire;
 				PRODUCT_NAME = Alamofire;
@@ -1231,11 +1226,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-PIK/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-PIK/Pods-PIK.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1268,18 +1259,14 @@
 				INFOPLIST_FILE = "Target Support Files/SnapKit/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SnapKit/SnapKit.modulemap";
 				PRODUCT_MODULE_NAME = SnapKit;
 				PRODUCT_NAME = SnapKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1369,11 +1356,7 @@
 				INFOPLIST_FILE = "Target Support Files/BonMot/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/BonMot/BonMot.modulemap";
 				PRODUCT_MODULE_NAME = BonMot;
 				PRODUCT_NAME = BonMot;
@@ -1405,11 +1388,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-PIK/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-PIK/Pods-PIK.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1481,8 +1460,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -1505,11 +1483,7 @@
 				INFOPLIST_FILE = "Target Support Files/MARKRangeSlider/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MARKRangeSlider/MARKRangeSlider.modulemap";
 				PRODUCT_MODULE_NAME = MARKRangeSlider;
 				PRODUCT_NAME = MARKRangeSlider;
@@ -1540,18 +1514,14 @@
 				INFOPLIST_FILE = "Target Support Files/SnapKit/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SnapKit/SnapKit.modulemap";
 				PRODUCT_MODULE_NAME = SnapKit;
 				PRODUCT_NAME = SnapKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1576,11 +1546,7 @@
 				INFOPLIST_FILE = "Target Support Files/MARKRangeSlider/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MARKRangeSlider/MARKRangeSlider.modulemap";
 				PRODUCT_MODULE_NAME = MARKRangeSlider;
 				PRODUCT_NAME = MARKRangeSlider;
@@ -1612,11 +1578,7 @@
 				INFOPLIST_FILE = "Target Support Files/BonMot/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/BonMot/BonMot.modulemap";
 				PRODUCT_MODULE_NAME = BonMot;
 				PRODUCT_NAME = BonMot;
@@ -1648,11 +1610,7 @@
 				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
 				PRODUCT_MODULE_NAME = Alamofire;
 				PRODUCT_NAME = Alamofire;

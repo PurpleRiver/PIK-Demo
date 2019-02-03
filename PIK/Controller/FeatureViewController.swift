@@ -8,6 +8,7 @@ class FeatureViewController: UIViewController {
     private let infoText = UILabel()
     private let badgeLabel = UILabel()
     private let imageContainer = UIView()
+    private let decorForImage = UIView()
     
     var features = Feature()
     
@@ -19,12 +20,13 @@ class FeatureViewController: UIViewController {
         
         view.addSubview(scrollView)
         scrollView.addSubview(imageContainer)
+        
         scrollView.addSubview(imageView)
+        imageContainer.addSubview(decorForImage)
         
         showImage()
         showText()
         showBadgeLabel()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,7 +63,15 @@ class FeatureViewController: UIViewController {
         imageContainer.snp.makeConstraints { make in
             make.top.equalTo(scrollView)
             make.left.right.equalTo(view)
-            make.height.equalTo(imageContainer.snp.width)
+            make.height.equalTo(imageContainer.snp.width).multipliedBy(1.2)
+        }
+        
+        decorForImage.backgroundColor = .orange
+        
+        decorForImage.snp.makeConstraints { make in
+            make.top.equalTo(imageContainer.snp.bottom)
+            make.left.right.equalTo(view)
+            make.height.equalTo(2)
         }
         
         imageView.snp.makeConstraints { make in
@@ -77,7 +87,7 @@ class FeatureViewController: UIViewController {
         imageView.addSubview(badgeLabel)
         
         badgeLabel.text = features.getName()
-        badgeLabel.font = UIFont.appFontBold(ofSize: 20)
+        badgeLabel.font = UIFont.appFontBold(ofSize: 18)
         badgeLabel.textColor = .white
         badgeLabel.backgroundColor = .orange
         badgeLabel.layer.cornerRadius = 3
@@ -97,7 +107,7 @@ class FeatureViewController: UIViewController {
         
         let text = features.getDescription()
         
-        infoText.font = UIFont.appFont(ofSize: 20)
+        infoText.font = UIFont.appFont(ofSize: 18)
         infoText.text = text
         infoText.numberOfLines = 0
         
@@ -108,13 +118,13 @@ class FeatureViewController: UIViewController {
         textContainer.addSubview(infoText)
         
         textContainer.snp.makeConstraints { make in
-            make.top.equalTo(imageView.snp.bottom)
+            make.top.equalTo(decorForImage.snp.bottom)
             make.left.right.equalTo(view)
             make.bottom.equalTo(scrollView)
         }
         
         infoText.snp.makeConstraints { make in
-            make.edges.edges.equalTo(textContainer).inset(20)
+            make.edges.edges.equalTo(textContainer).inset(30)
         }
     }
 }

@@ -16,7 +16,11 @@ class FilterTableViewController: UITableViewController, UIPickerViewDelegate, UI
     @IBOutlet weak var choosePeriodPickerView: UIPickerView!
     @IBOutlet weak var choosePeriodLabel: UILabel!
     
-    @IBOutlet var rangeSlider: MARKRangeSlider!
+    @IBOutlet var rangeSlider: MARKRangeSlider! {
+        didSet {
+            rangeSlider.rangeImage = UIImage(named: "rangeImage")
+        }
+    }
     @IBOutlet weak var minimumValueLabel: UILabel!
     @IBOutlet weak var maximumValueLabel: UILabel!
     
@@ -41,14 +45,13 @@ class FilterTableViewController: UITableViewController, UIPickerViewDelegate, UI
     // MARK: - Implementation of Range Slider
     
     private func setupSlider() {
+        
         rangeSlider = MARKRangeSlider.init(frame: CGRect.zero)
         rangeSlider.addTarget(self, action: #selector(rangeSliderValueDidChange), for: UIControl.Event.valueChanged)
         
         rangeSlider.setMinValue(1.9, maxValue: 18)
         rangeSlider.setLeftValue(1.9, rightValue: 18)
-        rangeSlider.minimumDistance = 1.7
-        
-        rangeSlider.tintColor = UIColor.orange
+        rangeSlider.minimumDistance = 1
         
         rangeSlider.frame = CGRect(x: 20, y: 130, width: view.bounds.width - 40, height: 30)
         tableView.addSubview(rangeSlider)
@@ -84,7 +87,7 @@ class FilterTableViewController: UITableViewController, UIPickerViewDelegate, UI
         if pickerView.tag == 1 {
             cityNamesLabel.text = cityNames[row]
             
-        }else{
+        } else {
             choosePeriodLabel.text = differentPeriods[row]
         }
     }
