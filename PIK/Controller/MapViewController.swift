@@ -2,7 +2,7 @@ import UIKit
 import GoogleMaps
 
 class MapViewController: UIViewController, GMSMapViewDelegate {
-
+    
     @IBOutlet fileprivate weak var mapView: GMSMapView!
     var products: Product = Product()
     
@@ -47,7 +47,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         marker.icon = UIImage(named: "pikIcon")
         marker.map = mapView
     }
-  
+    
     func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
         
         let customInfoWindow = Bundle.main.loadNibNamed("CustomInfoWindow", owner: self, options: nil)!.first as! CustomInfoWindow

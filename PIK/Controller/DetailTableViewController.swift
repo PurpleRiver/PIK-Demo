@@ -15,17 +15,32 @@ class DetailTableViewController: UITableViewController, UICollectionViewDelegate
             }
         }
     }
+    
     @IBOutlet weak var detailNameTextLabel: UILabel! {
         didSet {
             detailNameTextLabel.text = detailsOfHouse.getName()
         }
     }
+    
+    @IBOutlet weak var priceLabel: UILabel! {
+        didSet {
+            priceLabel.text = detailsOfHouse.getPrice()
+        }
+    }
+    
     @IBOutlet weak var bottomGradientMask: UIImageView! {
         didSet {
             bottomGradientMask.setGradientBackground(colorOne: UIColor.clear, colorTwo: UIColor.black)
             bottomGradientMask.alpha = 1
         }
     }
+    
+    @IBOutlet weak var textAboutNeighborhood: UILabel! {
+        didSet {
+         textAboutNeighborhood.text = detailsOfHouse.getTextAboutNeighborhood()
+        }
+    }
+    
     @IBOutlet weak var detailCollectionView: UICollectionView!
     
     @IBOutlet fileprivate weak var mapView: GMSMapView!

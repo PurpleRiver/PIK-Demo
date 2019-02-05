@@ -58,9 +58,9 @@ class FilterTableViewController: UITableViewController, UIPickerViewDelegate, UI
     }
     
     @objc func rangeSliderValueDidChange(slider: MARKRangeSlider) {
-
-        minimumValueLabel.text = ("От " + (NSString(format:"%.1f", slider.leftValue) as String) + " млн ₽")
-        maximumValueLabel.text = ("До " + (NSString(format:"%.1f", slider.rightValue) as String) + " млн ₽")
+        
+        minimumValueLabel.text = ("от " + (NSString(format:"%.1f", slider.leftValue) as String) + " млн ₽")
+        maximumValueLabel.text = ("до " + (NSString(format:"%.1f", slider.rightValue) as String) + " млн ₽")
     }
     
     // MARK: - Picker View
@@ -78,7 +78,7 @@ class FilterTableViewController: UITableViewController, UIPickerViewDelegate, UI
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
         let titlesForRow = pickerView.tag == 1 ? cityNames[row] : differentPeriods[row]
-       
+        
         return titlesForRow
     }
     

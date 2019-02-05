@@ -93,24 +93,24 @@ class MainTableViewController: UITableViewController, UICollectionViewDataSource
     
     // MARK: - Fetching data for collection view.
     
-   private func fetchData() {
+    private func fetchData() {
         Alamofire.request("https://my-json-server.typicode.com/PurpleRiver/fakeJsonServer/products").responseJSON { response in
             
             switch response.result {
             case .success:
-
-                guard let string = String(data: response.data!, encoding: .utf8) else { return }
-                print(string)
+                
+                guard String(data: response.data!, encoding: .utf8) != nil else { return }
                 
                 guard let arrayOfProducts = response.result.value as? [[String:AnyObject]]
                     else {
                         print("Cant make an array")
+                        
                         return
                 }
                 
                 for house in arrayOfProducts {
                     
-                    let house = Product(name: house["name"] as! String, price: house["price"] as! String, image: house["image"] as! String, latitude: house["latitude"] as! Double, longitude: house["longitude"] as! Double)
+                    let house = Product(name: house["name"] as! String, price: house["price"] as! String, image: house["image"] as! String, textAboutNeighborhood: house["textAboutNeighborhood"] as! String, latitude: house["latitude"] as! Double, longitude: house["longitude"] as! Double)
                     
                     self.products.append(house)
                 }
@@ -154,7 +154,7 @@ class MainTableViewController: UITableViewController, UICollectionViewDataSource
         return cell
     }
     
-     // Functionality for call button
+    // Functionality for call button
     func phonecallFeature() {
         
         let callOptionsMenu = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
