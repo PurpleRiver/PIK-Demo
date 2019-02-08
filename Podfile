@@ -10,7 +10,8 @@ target 'PIK' do
   pod 'BonMot', '~> 5.3'
   pod 'GoogleMaps'
   pod 'Alamofire'
-  pod 'SnapKit', '~> 4.0.0'
+  pod 'SnapKit', '~> 4.2'
   pod 'AppCenter'
+  pod 'StretchHeader', '~> 1.1'
 
 end

@@ -1,15 +1,31 @@
 import UIKit
 import BonMot
 import Alamofire
+import StretchHeader
+
 
 class MainTableViewController: UITableViewController, UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate, UISearchResultsUpdating {
+//    var header: StretchHeader!
     
-    @IBOutlet weak var topGradientMask: UIImageView! {
-        didSet {
-            topGradientMask.setGradientBackground(colorOne: UIColor.black, colorTwo: UIColor.clear)
-            topGradientMask.alpha = 0.5
-        }
-    }
+//    func setupHeaderView() {
+//
+//        let options = StretchHeaderOptions()
+//        options.position = .fullScreenTop
+//
+//        header = StretchHeader()
+//        header.stretchHeaderSize(headerSize: CGSize(width: view.frame.size.width, height: 500),
+//                                 imageSize: CGSize(width: view.frame.size.width, height: 500),
+//                                 controller: self,
+//                                 options: options)
+//        header.imageView.image = #imageLiteral(resourceName: "mecherskiiLes")
+//
+//        tableView.tableHeaderView = header
+//    }
+//
+    // MARK: - ScrollView Delegate
+//    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        header.updateScrollViewOffset(scrollView)
+//    }
     @IBOutlet weak var bottomGradientMask: UIImageView! {
         didSet {
             bottomGradientMask.setGradientBackground(colorOne: UIColor.clear, colorTwo: UIColor.black)
@@ -17,7 +33,6 @@ class MainTableViewController: UITableViewController, UICollectionViewDataSource
         }
     }
     
-    @IBOutlet weak var headerImageView: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
     
     @IBAction func unwindToHome(segue: UIStoryboardSegue) {
@@ -47,11 +62,12 @@ class MainTableViewController: UITableViewController, UICollectionViewDataSource
         
         configureSearchController()
         fetchData()
+//        setupHeaderView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     

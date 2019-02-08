@@ -15,7 +15,8 @@ PODS:
   - GoogleMaps/Maps (2.5.0):
     - GoogleMaps/Base
   - MARKRangeSlider (1.1.1)
-  - SnapKit (4.0.1)
+  - SnapKit (4.2.0)
+  - StretchHeader (1.1.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -23,7 +24,8 @@ DEPENDENCIES:
   - BonMot (~> 5.3)
   - GoogleMaps
   - MARKRangeSlider
-  - SnapKit (~> 4.0.0)
+  - SnapKit (~> 4.2)
+  - StretchHeader (~> 1.1)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -33,6 +35,7 @@ SPEC REPOS:
     - GoogleMaps
     - MARKRangeSlider
     - SnapKit
+    - StretchHeader
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
@@ -40,8 +43,9 @@ SPEC CHECKSUMS:
   BonMot: 0104d1b4eda54f4a4b7393d6559539ef25498fbd
   GoogleMaps: c087b8e5dfe87ca6ebf59adb9b4894a4146bec4f
   MARKRangeSlider: ef7e1fe84d22996f47fd72dcb8de50b9410aac47
-  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  StretchHeader: 2ae5ef71f07fc7a9e7d9faec69a3b630f0c4383f
 
-PODFILE CHECKSUM: 1b5586959a7fcd5ecd58742ee83d8889252e7394
+PODFILE CHECKSUM: 836158e7790f92f244775dc0a1787d535cb44cd3
 
 COCOAPODS: 1.5.3

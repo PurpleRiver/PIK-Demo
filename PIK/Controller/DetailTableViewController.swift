@@ -1,37 +1,15 @@
 import UIKit
 import GoogleMaps
 import BonMot
+import SnapKit
 import Alamofire
+import StretchHeader
 
 class DetailTableViewController: UITableViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-    
-    @IBOutlet weak var detailLargeImage: UIImageView! {
-        didSet {
-            let imgUrl = NSURL(string: detailsOfHouse.getImage())
-            
-            if imgUrl != nil {
-                let data = NSData(contentsOf: imgUrl! as URL)
-                detailLargeImage.image = UIImage(data: data! as Data)
-            }
-        }
-    }
-    
-    @IBOutlet weak var detailNameTextLabel: UILabel! {
-        didSet {
-            detailNameTextLabel.text = detailsOfHouse.getName()
-        }
-    }
     
     @IBOutlet weak var priceLabel: UILabel! {
         didSet {
             priceLabel.text = detailsOfHouse.getPrice()
-        }
-    }
-    
-    @IBOutlet weak var bottomGradientMask: UIImageView! {
-        didSet {
-            bottomGradientMask.setGradientBackground(colorOne: UIColor.clear, colorTwo: UIColor.black)
-            bottomGradientMask.alpha = 1
         }
     }
     
@@ -42,8 +20,10 @@ class DetailTableViewController: UITableViewController, UICollectionViewDelegate
     }
     
     @IBOutlet weak var detailCollectionView: UICollectionView!
-    
     @IBOutlet fileprivate weak var mapView: GMSMapView!
+    
+    private var header: StretchHeader!
+    private var headerImage = UIImageView()
     
     var detailsOfHouse: Product = Product()
     var features = [Feature]()
@@ -53,7 +33,7 @@ class DetailTableViewController: UITableViewController, UICollectionViewDelegate
         super.viewDidLoad()
         
         fetchData()
-        
+        setupHeaderView()
         setCameraPosition()
     }
     
@@ -66,15 +46,44 @@ class DetailTableViewController: UITableViewController, UICollectionViewDelegate
     // MARK: - Custom style for ViewController
     private func customNavigationContoller() {
         
+        navigationItem.title = detailsOfHouse.getName()
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = true
+        
         navigationController?.view.backgroundColor = UIColor.clear
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
+    }
+    
+    // MARK: - Streachy Header
+    func setupHeaderView() {
+        
+        let options = StretchHeaderOptions()
+        options.position = .fullScreenTop
+        
+        header = StretchHeader()
+        header.stretchHeaderSize(headerSize: CGSize(width: view.frame.size.width, height: 490),
+                                 imageSize: CGSize(width: view.frame.size.width, height: 490),
+                                 controller: self,
+                                 options: options)
+        
+        let imgUrl = NSURL(string: detailsOfHouse.getImage())
+        
+        if imgUrl != nil {
+            let data = NSData(contentsOf: imgUrl! as URL)
+            headerImage.image = UIImage(data: data! as Data)
+        }
+        header.imageView.image = headerImage.image
+        tableView.tableHeaderView = header
+    }
+    
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        header.updateScrollViewOffset(scrollView)
     }
     
     // MARK: - Fetching data for collection view.
