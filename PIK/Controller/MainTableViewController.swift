@@ -5,27 +5,7 @@ import StretchHeader
 
 
 class MainTableViewController: UITableViewController, UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate, UISearchResultsUpdating {
-//    var header: StretchHeader!
-    
-//    func setupHeaderView() {
-//
-//        let options = StretchHeaderOptions()
-//        options.position = .fullScreenTop
-//
-//        header = StretchHeader()
-//        header.stretchHeaderSize(headerSize: CGSize(width: view.frame.size.width, height: 500),
-//                                 imageSize: CGSize(width: view.frame.size.width, height: 500),
-//                                 controller: self,
-//                                 options: options)
-//        header.imageView.image = #imageLiteral(resourceName: "mecherskiiLes")
-//
-//        tableView.tableHeaderView = header
-//    }
-//
-    // MARK: - ScrollView Delegate
-//    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        header.updateScrollViewOffset(scrollView)
-//    }
+
     @IBOutlet weak var bottomGradientMask: UIImageView! {
         didSet {
             bottomGradientMask.setGradientBackground(colorOne: UIColor.clear, colorTwo: UIColor.black)
@@ -57,12 +37,12 @@ class MainTableViewController: UITableViewController, UICollectionViewDataSource
     }
     
     // MARK: - View Controller Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configureSearchController()
         fetchData()
-//        setupHeaderView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -84,6 +64,7 @@ class MainTableViewController: UITableViewController, UICollectionViewDataSource
     }
     
     // MARK: - Implementing searchBar
+    
     private func configureSearchController() {
         searchController = UISearchController(searchResultsController: nil)
         
@@ -142,6 +123,7 @@ class MainTableViewController: UITableViewController, UICollectionViewDataSource
     }
     
     // MARK: - Collection View
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if searchController.isActive {
@@ -171,6 +153,7 @@ class MainTableViewController: UITableViewController, UICollectionViewDataSource
     }
     
     // Functionality for call button
+    
     func phonecallFeature() {
         
         let callOptionsMenu = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
@@ -204,6 +187,7 @@ class MainTableViewController: UITableViewController, UICollectionViewDataSource
     }
     
     // MARK: - Navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "viewControllerForFiltering" {

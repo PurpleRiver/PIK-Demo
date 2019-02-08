@@ -29,6 +29,7 @@ class DetailTableViewController: UITableViewController, UICollectionViewDelegate
     var features = [Feature]()
     
     // MARK: - View Controller Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,6 +45,7 @@ class DetailTableViewController: UITableViewController, UICollectionViewDelegate
     }
     
     // MARK: - Custom style for ViewController
+    
     private func customNavigationContoller() {
         
         navigationItem.title = detailsOfHouse.getName()
@@ -61,6 +63,7 @@ class DetailTableViewController: UITableViewController, UICollectionViewDelegate
     }
     
     // MARK: - Streachy Header
+    
     func setupHeaderView() {
         
         let options = StretchHeaderOptions()
@@ -87,6 +90,7 @@ class DetailTableViewController: UITableViewController, UICollectionViewDelegate
     }
     
     // MARK: - Fetching data for collection view.
+    
     private func fetchData() {
         Alamofire.request("https://my-json-server.typicode.com/PurpleRiver/fakeJsonServer/features").responseJSON { response in
             switch response.result {
@@ -116,6 +120,7 @@ class DetailTableViewController: UITableViewController, UICollectionViewDelegate
     }
     
     // MARK: - Collection view data source
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return features.count
     }
@@ -136,6 +141,7 @@ class DetailTableViewController: UITableViewController, UICollectionViewDelegate
     }
     
     // MARK: - MapView
+    
     private func setCameraPosition() {
         
         let camera = GMSCameraPosition.camera(withLatitude: detailsOfHouse.getLatitude(), longitude: detailsOfHouse.getLongitude(), zoom: 14.0)
@@ -152,6 +158,7 @@ class DetailTableViewController: UITableViewController, UICollectionViewDelegate
     }
     
     // MARK: - Navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "showFeatures" {

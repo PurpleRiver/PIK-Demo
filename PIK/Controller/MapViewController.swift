@@ -7,6 +7,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     var products: Product = Product()
     
     // MARK: - View Controller Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,6 +22,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     }
     
     // MARK: - Custom style for ViewController
+    
     private func customNavigationContoller() {
         
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
@@ -31,6 +33,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     }
     
     // MARK: - MapView
+    
     private func setCameraPosition() {
         
         let camera = GMSCameraPosition.camera(withLatitude: products.getLatitude(), longitude: products.getLongitude(), zoom: 16.0)

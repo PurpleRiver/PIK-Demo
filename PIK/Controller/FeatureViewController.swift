@@ -13,6 +13,7 @@ class FeatureViewController: UIViewController {
     var features = Feature()
     
     // MARK: - View Controller Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,6 +37,7 @@ class FeatureViewController: UIViewController {
     }
     
     // MARK: - Custom style for ViewController
+    
     private func customNavigationContoller() {
         
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
